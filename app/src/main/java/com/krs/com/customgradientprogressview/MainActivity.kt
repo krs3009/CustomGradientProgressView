@@ -1,14 +1,22 @@
 package com.krs.com.customgradientprogressview
 
+import android.content.Context
+import android.content.Intent
 import android.os.Build
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.annotation.RequiresApi
 import kotlinx.android.synthetic.main.activity_main.*
+import java.io.Serializable
 
 
 @RequiresApi(Build.VERSION_CODES.KITKAT)
 class MainActivity : AppCompatActivity() {
+
+    fun newIntent(context: Context): Intent {
+        val intent = Intent(context, MainActivity::class.java)
+        return intent
+    }
 
     var currentProgressValue:Int= 40
 
