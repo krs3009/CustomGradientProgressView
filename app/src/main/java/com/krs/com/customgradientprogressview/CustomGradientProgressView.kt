@@ -19,12 +19,9 @@ import kotlinx.android.synthetic.main.layout_custom_progress.view.*
 
 class CustomGradientProgressView : RelativeLayout, OnSeekBarChangeListener {
 
-    private lateinit var mContext: Context
-
     private var thumbTouchable: Boolean = false;
 
     constructor(context: Context) : this(context, null) {
-        mContext = context
         initView()
     }
 
