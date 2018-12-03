@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomGradientProgressView">
+        <attr name="backgroundColor" format="color"></attr>
+        <attr name="progressStartColor" format="color"></attr>
+        <attr name="progressEndColor" format="color"></attr>
+    </declare-styleable>
+</resources>
