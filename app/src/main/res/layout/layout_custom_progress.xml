@@ -6,7 +6,7 @@
     android:orientation="vertical">
 
     <SeekBar xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/seekbar_custom"
+        android:id="@+id/seekbarCustom"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
         android:layout_height="20dp"
@@ -19,32 +19,32 @@
         />
 
     <TextView
-        android:id="@+id/tv_start_progress"
+        android:id="@+id/tvProgressStart"
         style="@style/TextAppearance.AppCompat.Medium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/seekbar_custom"
+        android:layout_below="@+id/seekbarCustom"
         android:layout_marginLeft="@dimen/large_margin"
         tools:text="1000" />
 
     <TextView
-        android:id="@+id/tv_current_progress"
+        android:id="@+id/tvProgressCurrent"
         style="@style/TextAppearance.AppCompat.Medium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/seekbar_custom"
+        android:layout_below="@+id/seekbarCustom"
         android:layout_centerInParent="true"
         android:layout_marginLeft="@dimen/large_margin"
         tools:text="1000" />
 
     <TextView
-        android:id="@+id/tv_end_progress"
+        android:id="@+id/tvProgressEnd"
         style="@style/TextAppearance.AppCompat.Medium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/seekbar_custom"
+        android:layout_below="@+id/seekbarCustom"
         android:layout_marginLeft="@dimen/large_margin"
         android:layout_marginRight="@dimen/medium_margin"
         tools:text="1000" />

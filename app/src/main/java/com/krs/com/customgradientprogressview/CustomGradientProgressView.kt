@@ -52,8 +52,8 @@ class CustomGradientProgressView : RelativeLayout, OnSeekBarChangeListener {
         val thumbRect = seekBar.getThumb().bounds
         param.setMargins(
                 thumbRect.centerX(), 10, 0, 0)
-        tv_current_progress.layoutParams = param
-        tv_current_progress.setText(""+progress.toString())
+        tvProgressCurrent.layoutParams = param
+        tvProgressCurrent.setText(""+progress.toString())
     }
 
 
@@ -61,37 +61,37 @@ class CustomGradientProgressView : RelativeLayout, OnSeekBarChangeListener {
         val inflater = context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         inflater.inflate(R.layout.layout_custom_progress, this)
-        seekbar_custom.setOnSeekBarChangeListener(this)
+        seekbarCustom.setOnSeekBarChangeListener(this)
     }
 
     fun setProgressDrawable(customDrawable: Int){
-        seekbar_custom.setProgressDrawable(ResourcesCompat.getDrawable(getResources(),customDrawable,null))
+        seekbarCustom.setProgressDrawable(ResourcesCompat.getDrawable(getResources(),customDrawable,null))
     }
 
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     fun setSplitTrack(split: Boolean) {
-        seekbar_custom.splitTrack = split;
+        seekbarCustom.splitTrack = split;
     }
 
     fun setProgressStart(start: Int) {
-        tv_start_progress.setText("" + start);
+        tvProgressStart.setText("" + start);
     }
 
     fun setProgressMax(maxValue: Int) {
-        tv_end_progress.setText("" + maxValue)
-        seekbar_custom.setMax(maxValue)
+        tvProgressEnd.setText("" + maxValue)
+        seekbarCustom.setMax(maxValue)
     }
 
     fun setProgressCurrent(current: Int) {
-        tv_current_progress.setText("" + current)
-        seekbar_custom.setProgress(current)
+        tvProgressCurrent.setText("" + current)
+        seekbarCustom.setProgress(current)
         Handler().postDelayed({
             val anim = ValueAnimator.ofInt(0, current)
             anim.duration = 1000
             anim.addUpdateListener { animation ->
                 val animProgress = animation.animatedValue as Int
-                seekbar_custom.setProgress(animProgress)
-                seekbar_custom.refreshDrawableState()
+                seekbarCustom.setProgress(animProgress)
+                seekbarCustom.refreshDrawableState()
             }
             anim.start()
         }, 100)
@@ -102,16 +102,16 @@ class CustomGradientProgressView : RelativeLayout, OnSeekBarChangeListener {
     @RequiresApi(Build.VERSION_CODES.KITKAT)
     fun hideThumb(hide: Boolean) {
         if (hide) {
-            seekbar_custom.thumb.mutate().alpha=0
+            seekbarCustom.thumb.mutate().alpha=0
             thumbTouchable = false;
         } else {
-            seekbar_custom.thumb.setColorFilter(android.R.color.black, PorterDuff.Mode.MULTIPLY);
+            seekbarCustom.thumb.setColorFilter(android.R.color.black, PorterDuff.Mode.MULTIPLY);
             thumbTouchable = true;
         }
     }
 
     fun getProgress(): Int? {
-        return seekbar_custom.getProgress()
+        return seekbarCustom.getProgress()
     }
 
 }
