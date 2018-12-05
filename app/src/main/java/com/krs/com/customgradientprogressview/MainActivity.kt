@@ -6,6 +6,7 @@ import android.os.Build
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.annotation.RequiresApi
+import com.krs.com.customgradientprogressview.R.id.custom_progress_view
 import kotlinx.android.synthetic.main.activity_main.*
 import java.io.Serializable
 

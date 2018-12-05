@@ -28,12 +28,6 @@ class MainActivityTest {
         val robot = MyRobot()
         robot.launch(mActivityRule)
                 .isViewDisplayed(R.id.custom_progress_view)
-                //.isDescendentViewDisplayed(R.id.tvProgressStart, R.id.custom_progress_view)
-                //.isDescendentViewDisplayed(R.id.tvProgressCurrent, R.id.custom_progress_view)
-               //.isDescendentViewDisplayed(R.id.tvProgressEnd, R.id.custom_progress_view)
-
-
-
     }
 
 
